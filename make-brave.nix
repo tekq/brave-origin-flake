@@ -275,12 +275,22 @@ stdenv.mkDerivation {
 
   meta = {
     homepage = "https://brave.com/origin/";
-    description = "";
+    description = "Get the Web your way: Best-in-class privacy, with just the features you want.";
     changelog =
       "https://github.com/brave/brave-browser/blob/master/CHANGELOG_DESKTOP_ORIGIN.md#"
       + lib.replaceStrings [ "." ] [ "" ] version;
     longDescription = ''
-      hello
+      Streamlined
+      A minimalist browser that lets you manage (or totally remove) features found in the free version of Brave.
+
+      Fast & private
+      Simplified to the core of Brave’s industry-leading ad blocking and privacy protections (via Shields), plus best-in-class speed.
+
+      Always current
+      Regularly updated with the same fixes, Chromium patches, and security & privacy improvements sent to Brave’s other releases.
+
+      Brave, your way
+      Use Brave Origin as a standalone app, with no extra features. Or upgrade the existing Brave app on your device, and toggle features on/off as you wish.
     '';
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
     license = lib.licenses.mpl20;
@@ -289,6 +299,7 @@ stdenv.mkDerivation {
       jefflabonte
       nasirhm
       buckley310
+      tekq
     ];
     platforms = [
       "aarch64-linux"
